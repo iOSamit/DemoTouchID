@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoTouchID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me your finger 👍" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0j-21-p9C">
+                                <rect key="frame" x="35.5" y="458" width="304" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="2K1-Zy-c8J"/>
+                                    <constraint firstAttribute="width" constant="304" id="38o-EU-3KW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TouchID_on" translatesAutoresizingMaskIntoConstraints="NO" id="rCk-f9-Eyy">
+                                <rect key="frame" x="110" y="46" width="155" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="fMV-kK-a4S"/>
+                                    <constraint firstAttribute="height" constant="155" id="l0u-mU-JXf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQP-aR-VXs">
+                                <rect key="frame" x="162" y="308" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="43u-z0-kVn"/>
+                                    <constraint firstAttribute="width" constant="51" id="D99-lq-zo1"/>
+                                </constraints>
+                                <state key="normal" image="Refresh"/>
+                                <connections>
+                                    <action selector="resetContextState:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gPt-My-C1I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lQP-aR-VXs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jeu-Ho-Vzr"/>
+                            <constraint firstItem="rCk-f9-Eyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0O-dc-lXr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v0j-21-p9C" secondAttribute="bottom" constant="64" id="YP4-lU-5uQ"/>
+                            <constraint firstItem="rCk-f9-Eyy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="e9p-46-bBK"/>
+                            <constraint firstItem="v0j-21-p9C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oCo-KV-Rjf"/>
+                            <constraint firstItem="lQP-aR-VXs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ocO-nA-PJX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="rCk-f9-Eyy" id="8W4-uu-xTx"/>
+                        <outlet property="message" destination="v0j-21-p9C" id="FTd-6o-vG8"/>
+                        <outlet property="refresh" destination="lQP-aR-VXs" id="fLZ-Z1-lth"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="88.605697151424295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Refresh" width="51" height="51"/>
+        <image name="TouchID_on" width="155" height="155"/>
+    </resources>
+</document>
