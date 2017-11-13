@@ -1,10 +1,11 @@
 //
 //  Utils.swift
-//  Thumba!
+//  DemoTouchID
 //
-//  Created by jgonzalez on 16/12/16.
-//  Copyright © 2016 Netquest. All rights reserved.
+//  Created by Amit on 13/11/2015 SAKA.
+//  Copyright © 2017 Dream World. All rights reserved.
 //
+
 
 import UIKit
 
